@@ -1,0 +1,258 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0b2545;
+  color: #ffffff;
+  padding: 80px 40px 40px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+/* Top bar / Navigation */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 900;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#portfolio-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.nav-buttons a,
+.nav-buttons a:link,
+.nav-buttons a:visited,
+.nav-buttons a:hover,
+.nav-buttons a:active,
+.nav-buttons a:focus {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Buttons */
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: opacity 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background: #1a1a1a;
+  min-width: 160px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  z-index: 1000;
+  padding: 8px 0;
+  top: 100%;
+  margin-top: 4px;
+}
+
+.dropdown-content .dropdown-item {
+  display: block;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content .dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+
+/* Project page */
+.project-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-hero {
+  margin-bottom: 32px;
+}
+
+.project-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.project-sub {
+  color: #cfe0ff;
+  font-size: 1.1rem;
+}
+
+/* Media section */
+.project-media {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .project-media {
+    grid-template-columns: 1fr;
+  }
+}
+
+.media-video video,
+.media-video iframe {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  border-radius: 8px;
+  background: #000;
+  display: block;
+}
+
+/* Screenshots */
+.media-screenshots {
+  display: grid;
+  gap: 12px;
+}
+
+.media-screenshots figure {
+  margin: 0;
+}
+
+.media-screenshots img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.media-screenshots figcaption {
+  color: #cfe0ff;
+  font-size: 0.9rem;
+  padding-top: 6px;
+}
+
+/* Project details */
+.project-details {
+  margin-top: 40px;
+  color: #e6eefc;
+}
+
+.project-details h2,
+.project-details h3 {
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.project-details h2 {
+  font-size: 1.5rem;
+}
+
+.project-details p {
+  margin-bottom: 16px;
+}
+
+.project-details ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.project-details li {
+  margin-bottom: 8px;
+}
+
+.tech {
+  color: #cfe0ff;
+  font-size: 1rem;
+}
+
+/* Links / Buttons */
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #1b73e8;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #1557b0;
+}
+
+/* Footer */
+.site-footer {
+  margin-top: 60px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cfe0ff;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 80px 20px 40px;
+  }
+
+  .project-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .project-media {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
